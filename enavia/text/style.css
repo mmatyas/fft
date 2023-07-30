@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'FtMain';
+  src: url(../game/data/font_regular.ttf);
+}
+@font-face {
+  font-family: 'FtMain';
+  src: url(../game/data/font_bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'FtMain';
+  src: url(../game/data/font_italic.ttf);
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #bbbbaa;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  width: 100%;
+  max-width: 44em;
+  margin: 0 auto;
+  padding: 4em;
+
+  font-family: FtMain, serif;
+  font-size: 18px;
+  line-height: 1.5;
+
+  color: #111;
+  background-color: #ffffdd;
+}
+
+h1, h2, h3 {
+  break-after: avoid;
+}
+h1, h2, nav {
+  break-before: page;
+}
+h2, h3 {
+  margin: 2em 0 1em 0;
+  column-span: all;
+}
+
+p {
+  hyphens: auto;
+  break-inside: avoid;
+}
+
+a {
+  color: #00c;
+  display: block;
+  margin: .5em 0;
+  text-align: center;
+  text-decoration: underline dotted;
+  break-before: avoid;
+}
+a:hover {
+  text-decoration: underline;
+}
+nav a {
+  break-before: auto;
+}
+
+aside {
+  background-color: #bec;
+  font-size: .8em;
+  padding: 1px 1em;
+  border-radius: 12px;
+  margin: 3rem 0;
+}
+
+nav {
+  column-count: 2;
+  margin: 5em 0;
+}
+nav a:first-of-type,
+nav h2 {
+  margin-top: 0;
+}
+
+
+.smallcaps {
+  hyphens: none;
+  font-variant: small-caps;
+  white-space: nowrap;
+}
+.nobreak {
+  hyphens: none;
+}
+.center {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+.monologue {
+  margin: 2em auto;
+  padding: 0 2em;
+  border-width: 6px;
+  border-color: var(--oc-gray-5);
+  border-style: none dotted;
+}
+
+main > p:not(.monologue, .center, .noindent) {
+  text-indent: 1em;
+}
+
+
+.intro-book {
+  font-size: 2em;
+  margin: 2.5em 0 1.25em 0;
+}
+.intro-chapter-num {
+  font-size: 1.25em;
+  margin: 3em 0 0 0;
+}
+.intro-chapter-title {
+  font-size: 1.5em;
+  margin: .6em 0 3em 0;
+}
+.intro-tl {
+  font-size: 0.8em;
+  margin-top: 3em;
+}
+
+
+@media print {
+  main {
+    padding: 0;
+  }
+  aside {
+    border: 2px solid black;
+  }
+}
